@@ -1,0 +1,195 @@
+
+-- phpMyAdmin SQL Dump
+-- version 3.5.2.2
+-- http://www.phpmyadmin.net
+--
+-- Host: 127.0.0.1
+-- Generation Time: Jan 23, 2016 at 05:42 AM
+-- Server version: 5.5.27
+-- PHP Version: 5.4.7
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Database: `malasngoding`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE IF NOT EXISTS `admin` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`id`, `username`, `password`) VALUES
+(1, 'malasngoding', 'malasngoding123');
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+-- phpMyAdmin SQL Dump
+-- version 3.5.2.2
+-- http://www.phpmyadmin.net
+--
+-- Host: 127.0.0.1
+-- Generation Time: Jan 23, 2016 at 05:42 AM
+-- Server version: 5.5.27
+-- PHP Version: 5.4.7
+ 
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+ 
+ 
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+ 
+--
+-- Database: `malasngoding`
+--
+ 
+-- --------------------------------------------------------
+ 
+--
+-- Table structure for table `admin`
+--
+ 
+CREATE TABLE IF NOT EXISTS `admin` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+ 
+--
+-- Dumping data for table `admin`
+--
+ 
+INSERT INTO `admin` (`id`, `username`, `password`) VALUES
+(1, 'malasngoding', 'malasngoding123');
+ 
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Membuat Login Dengan PHP dan MySQL | MalasNgoding.com</title>	
+</head>
+<body>
+	<h1>Membuat Login Dengan PHP dan MySQL | MalasNgoding.com</h1>
+	<h3>Halaman Login Sederhana</h3>
+	<form action="login.php" method="post">		
+		<table>
+			<tr>
+				<td>Username</td>
+				<td><input type="text" name="username"></td>
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td><input type="password" name="password"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" name="login" value="Log In"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Membuat Login Dengan PHP dan MySQL | MalasNgoding.com</title>	
+</head>
+<body>
+	<h1>Membuat Login Dengan PHP dan MySQL | MalasNgoding.com</h1>
+	<h3>Halaman Login Sederhana</h3>
+	<form action="login.php" method="post">		
+		<table>
+			<tr>
+				<td>Username</td>
+				<td><input type="text" name="username"></td>
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td><input type="password" name="password"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" name="login" value="Log In"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
+
+
+
+
+<?php 
+mysql_connect("localhost","root","xxx"); //sesuaikan dengan password dan username mysql anda
+mysql_select_db("malasngoding"); //nama database yang kita gunakan
+?>
+<?php 
+mysql_connect("localhost","root","xxx"); //sesuaikan dengan password dan username mysql anda
+mysql_select_db("malasngoding"); //nama database yang kita gunakan
+?>
+
+
+<?php 
+include 'koneksi.php';
+
+$username = $_POST['username'];
+$password = $_POST['password'];
+
+$query = mysql_query("select * from admin where username='$username' and password='$password'");
+$cek = mysql_num_rows($query);
+echo $cek;
+?>
+<?php 
+include 'koneksi.php';
+ 
+$username = $_POST['username'];
+$password = $_POST['password'];
+ 
+$query = mysql_query("select * from admin where username='$username' and password='$password'");
+$cek = mysql_num_rows($query);
+echo $cek;
+?>
+
+
+$username = $_POST['username'];
+$password = $_POST['password'];
+$username = $_POST['username'];
+$password = $_POST['password'];
+
+$query = mysql_query("select * from admin where username='$username' and password='$password'");
+$cek = mysql_num_rows($query);
+echo $cek;
+$query = mysql_query("select * from admin where username='$username' and password='$password'");
+$cek = mysql_num_rows($query);
+echo $cek;
